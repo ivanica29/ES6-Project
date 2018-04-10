@@ -1,1 +1,2 @@
-console.log("hello world");
+import fetchChampions from './services/api';
+console.log(fetchChampions());
