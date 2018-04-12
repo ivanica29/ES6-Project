@@ -46,3 +46,51 @@ input {
     transform: scale(1.1);
     transition: 0.5s;
 }
+
+.map{
+    position: absolute;
+    margin-top: 20px;
+    background-size: cover;
+    background-image: url("./images/GIkIj.jpg");
+    width: 900px;
+    height: 900px;
+}
+
+.champ-item0{
+    margin-top: 300px !important;
+
+    color: white;
+}
+
+.champ-item1 {
+    margin-top: 450px !important;
+    margin-left: 50px !important;
+
+    color: white;
+}
+.champ-item2 {
+    margin-top: 600px !important;
+    margin-left: -20px !important;
+
+    color: white;
+}
+.champ-item3 {
+    margin-left: -50px !important;
+    margin-top: 750px !important;
+
+
+    color: white;
+}
+.champ-item4 {
+    margin-top: 750px !important;
+    margin-left: -80px !important;
+
+    color: white;
+}
+
+.team-champ-pic {
+    border: white 1px solid;
+    width: 50%;
+    height: 50%;
+    border-radius: 50% !important;
+}

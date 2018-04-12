@@ -29,4 +29,38 @@ export default class View {
       maindiv.appendChild(champItem);
     })
   }
+
+  static showTeam(list) {
+    let maindiv = document.getElementById('champ-items');
+
+    maindiv.className = 'champ-items-team';
+    let pic = document.createElement('div');
+    pic.className = 'map';
+    maindiv.appendChild(pic);
+
+    list.forEach((element, index) => {
+      let champItem = document.createElement('div');
+      champItem.className = 'champ-item' + index;
+      champItem.className += ' col-md-2';
+
+      let listItem = document.createElement('div');
+      listItem.className = 'col-md-2';
+      listItem.className = 'champ-header';
+      let champ = `${element.localized_name}`;
+      listItem.innerHTML = champ;
+      champItem.appendChild(listItem);
+
+      let string_img = element.name.split('npc_dota_hero_')[1] + '_lg.png';
+
+      let img = document.createElement('img');
+      img.src = 'http://cdn.dota2.com/apps/dota2/images/heroes/' + string_img;
+      img.className = 'champ-pic';
+      img.className += ' team-champ-pic'
+      champItem.appendChild(img);
+
+      maindiv.appendChild(champItem);
+    })
+
+
+  }
 }

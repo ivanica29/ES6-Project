@@ -44,14 +44,14 @@ export default class HeroService {
   chooseTeam(champions) {
     View.clearList();
 
-    let item1 = champions[Math.floor(Math.random()*champions.length)];
+    let item1 = champions[Math  .floor(Math.random()*champions.length)];
     let item2 = champions[Math.floor(Math.random()*champions.length)];
     let item3 = champions[Math.floor(Math.random()*champions.length)];
     let item4 = champions[Math.floor(Math.random()*champions.length)];
     let item5 = champions[Math.floor(Math.random()*champions.length)];
 
     const newList = [item1, item2, item3, item4, item5];
-    View.showView(newList);
+    View.showTeam(newList);
 
     return newList;
   }
