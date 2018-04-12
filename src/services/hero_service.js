@@ -8,6 +8,9 @@ export default class HeroService {
       fetchChampions()
     );
     this.registerEvents();
+    this.champs.subscribe(
+      (champions) => this.showChampions(champions)
+    );
   }
 
   registerEvents() {
@@ -21,10 +24,10 @@ export default class HeroService {
         queryTerm = text;
         return this.champs;
       })
-      .subscribe((champs) => this.showFiltered(champs, queryTerm));
+      .subscribe((champs) => this.showChampions(champs, queryTerm));
   }
 
-  showFiltered(champions, term) {
+  showChampions(champions, term = '') {
     term = term.toLowerCase();
     View.clearList();
 
