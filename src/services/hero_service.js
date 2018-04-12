@@ -7,13 +7,16 @@ export default class HeroService {
     this.champs = Rx.Observable.fromPromise(
       fetchChampions()
     );
-    this.registerEvents();
+    this.registerEventInput();
+    this.registerEventMakeTeam();
+
     this.champs.subscribe(
       (champions) => this.showChampions(champions)
     );
+
   }
 
-  registerEvents() {
+  registerEventInput() {
     const searchInput = document.getElementById('input-field');
     let queryTerm = '';
 
@@ -36,5 +39,31 @@ export default class HeroService {
     });
 
     View.showView(newList);
+  }
+
+  chooseTeam(champions) {
+    View.clearList();
+
+    let item1 = champions[Math.floor(Math.random()*champions.length)];
+    let item2 = champions[Math.floor(Math.random()*champions.length)];
+    let item3 = champions[Math.floor(Math.random()*champions.length)];
+    let item4 = champions[Math.floor(Math.random()*champions.length)];
+    let item5 = champions[Math.floor(Math.random()*champions.length)];
+
+    const newList = [item1, item2, item3, item4, item5];
+    View.showView(newList);
+
+    return newList;
+  }
+
+  registerEventMakeTeam() {
+    const btnTeam = document.getElementById('make-team');
+
+    Rx.Observable.fromEvent(btnTeam, 'click')
+      .debounceTime(500)
+      .switchMap(() => {
+        return this.champs;
+      })
+      .subscribe((champs) => this.chooseTeam(champs));
   }
 }
