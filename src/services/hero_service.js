@@ -1,6 +1,6 @@
 import * as Rx from 'rxjs';
-import fetchChampions from './api';
-import View from '../view';
+import fetchChampions from './api_heroes';
+import View from '../view_heroes';
 
 export default class HeroService {
   constructor() {
@@ -9,6 +9,7 @@ export default class HeroService {
     );
     this.registerEventInput();
     this.registerEventMakeTeam();
+    this.registerEventShowChampions();
 
     this.champs.subscribe(
       (champions) => this.showChampions(champions)
@@ -44,7 +45,7 @@ export default class HeroService {
   chooseTeam(champions) {
     View.clearList();
 
-    let item1 = champions[Math  .floor(Math.random()*champions.length)];
+    let item1 = champions[Math.floor(Math.random()*champions.length)];
     let item2 = champions[Math.floor(Math.random()*champions.length)];
     let item3 = champions[Math.floor(Math.random()*champions.length)];
     let item4 = champions[Math.floor(Math.random()*champions.length)];
@@ -65,5 +66,21 @@ export default class HeroService {
         return this.champs;
       })
       .subscribe((champs) => this.chooseTeam(champs));
+  }
+
+  registerEventShowChampions() {
+    const btnShowChamps = document.getElementById('show-champions');
+
+    Rx.Observable.fromEvent(btnShowChamps, 'click')
+      .debounceTime(500)
+      .switchMap(() => {
+        return this.champs;
+      })
+      .subscribe((champs) => this.showChampions(champs));
+  }
+
+  static showDetails() {
+    let btn = document.getElementById('champ-items');
+    console.log('asd');
   }
 }

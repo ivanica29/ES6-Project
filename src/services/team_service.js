@@ -1,6 +1,6 @@
 import * as Rx from 'rxjs';
-import fetchChampions from './api';
-import View from '../view';
+import fetchChampions from './api_heroes';
+import View from '../view_heroes';
 
 export default class TeamService {
   constructor() {
@@ -8,6 +8,4 @@ export default class TeamService {
       fetchChampions()
     );
   }
-
-
 }
