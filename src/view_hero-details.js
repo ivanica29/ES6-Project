@@ -10,7 +10,7 @@ export default class ViewHeroDetails {
 
   }
 
-  static clearList() {
+  clearList() {
     let maindiv = document.getElementById('champ-items');
     maindiv.innerHTML = '';
 

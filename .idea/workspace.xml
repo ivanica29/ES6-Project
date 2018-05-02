@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4fd85be-1b69-46ee-93ef-c1d7ada09f34" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dist/images/Dota-2-Snowdrop-Wallpapers-HD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.js" afterPath="$PROJECT_DIR$/src/services/api_heroes.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/hero_service.js" afterPath="$PROJECT_DIR$/src/services/hero_service.js" />
-      <change beforePath="$PROJECT_DIR$/src/services/team_service.js" afterPath="$PROJECT_DIR$/src/services/team_service.js" />
-      <change beforePath="$PROJECT_DIR$/src/view.js" afterPath="$PROJECT_DIR$/src/view_heroes.js" />
+      <change beforePath="$PROJECT_DIR$/src/view_hero-details.js" afterPath="$PROJECT_DIR$/src/view_hero-details.js" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +39,8 @@
       <file leaf-file-name="hero-details_service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/hero-details_service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="43" column="82" lean-forward="false" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+            <state relative-caret-position="918">
+              <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -59,8 +51,8 @@
       <file leaf-file-name="view_hero-details.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view_hero-details.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="1206">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -364,12 +356,12 @@
       <workItem from="1523608090837" duration="119000" />
       <workItem from="1523615560487" duration="163000" />
       <workItem from="1524492895764" duration="5003000" />
-      <workItem from="1524854194886" duration="28154000" />
+      <workItem from="1524854194886" duration="28599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54933000" />
+    <option name="totallyTimeSpent" value="55378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="24" width="1255" height="735" extended-state="0" />
@@ -796,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/hero-details_service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="43" column="82" lean-forward="false" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+        <state relative-caret-position="918">
+          <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -806,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view_hero-details.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="1206">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
