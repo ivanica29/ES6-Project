@@ -78,9 +78,4 @@ export default class HeroService {
       })
       .subscribe((champs) => this.showChampions(champs));
   }
-
-  static showDetails() {
-    let btn = document.getElementById('champ-items');
-    console.log('asd');
-  }
 }

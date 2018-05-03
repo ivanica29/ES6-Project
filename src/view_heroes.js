@@ -8,10 +8,13 @@ export default class ViewHeroes {
 
     let itemsdiv = document.getElementById('items');
     itemsdiv.innerHTML = '';
+
+    let champDetail = document.getElementById('champ-detail');
+    champDetail.innerHTML = '';
   }
 
   static showView(list) {
-    let maindiv = document.getElementById('champ-items');
+    let maindiv = document.getElementById('champ-detail');
 
     list.forEach((element) => {
       let champItem = document.createElement('div');

@@ -30,4 +30,31 @@ export default class ItemService {
       })
       .subscribe((items) => this.showItems(items));
   }
+
+  appendItems(i1) {
+    this.items.subscribe((res) => {
+      let filteredItems = {};
+
+      res.filter((item) => {
+        return i1.includes(Number.parseInt(item.id));
+      }).forEach(item => {
+        filteredItems[item.id] = item;
+      });
+
+      let pics = i1.map((itemId) => {
+        if (!filteredItems[itemId]) {
+          return 'abyssal_blade_lg.png';
+        }
+
+        return filteredItems[itemId].name.split('item_')[1] + '_lg.png';
+      });
+
+
+      let viewItems = new ViewItems();
+
+      viewItems.showItemsForMatch(pics);
+    });
+
+  }
+
 }

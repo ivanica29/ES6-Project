@@ -1,5 +1,6 @@
 import * as Rx from "rxjs/Rx";
 import ViewHeroDetails from '../view_hero-details';
+import MatchService from './match_service';
 
 export default class HeroDetails {
 
@@ -40,9 +41,12 @@ export default class HeroDetails {
           foundAbilities.forEach((element) => {
             foundDescriptions.push(descriptionResponse[element.name].desc);
 
-            let service = new ViewHeroDetails();
-              service.showHeroAbilities(foundAbilities, champLocalName, champName, foundDescriptions);
-          })
+            let view = new ViewHeroDetails();
+            view.showHeroAbilities(foundAbilities, champLocalName, champName, foundDescriptions);
+
+          });
+          let matchService = new MatchService();
+          matchService.findMatchForChamp(id);
         });
       });
     })

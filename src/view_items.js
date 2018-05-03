@@ -10,7 +10,7 @@ export default class ViewItems {
 
       let listItem = document.createElement('div');
       listItem.className = 'col-md-3';
-      listItem.className = 'champ-header';
+      listItem.className = 'item-header';
       let itemName = `${element.localizedName}`;
       listItem.innerHTML = itemName;
       item.appendChild(listItem);
@@ -29,5 +29,27 @@ export default class ViewItems {
   static clearList() {
     let maindiv = document.getElementById('champ-items');
     maindiv.innerHTML = '';
+
+    let itemsdiv = document.getElementById('items');
+    itemsdiv.innerHTML = '';
+
+    let details = document.getElementById('champ-detail');
+    details.innerHTML = '';
+  }
+
+  showItemsForMatch(items) {
+    items.forEach((item, index) => {
+      let cell = document.getElementById('items_'+index);
+
+      if (!item || !cell) {
+        return;
+      }
+
+      let img = document.createElement('img');
+      img.src = 'http://cdn.dota2.com/apps/dota2/images/items/' + item;
+
+      cell.appendChild(img);
+
+    })
   }
 }

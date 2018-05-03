@@ -98,3 +98,48 @@ input {
     height: 50%;
     border-radius: 50% !important;
 }
+
+.item {
+    padding: 10px;
+    text-align: center;
+    display: inline;
+    font-family: 'Passion One', cursive;
+}
+
+table {
+    margin: 0 auto;
+    font-size: 18px;
+}
+th, td {
+    padding: 5px !important;
+    font-family: 'Passion One', cursive;
+}
+
+table tr:nth-child(even) {
+    background-color: #ade5ff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #d8f3ff;
+}
+table tr:hover {
+    background-color: white;
+}
+
+.wrapper-champ-detail {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ability-item {
+    padding: 15px;
+}
+
+.ability-name {
+    margin-bottom: 5px;
+}
+
+p {
+    margin-left: 5px !important;
+    font-size: 18px !important;
+}

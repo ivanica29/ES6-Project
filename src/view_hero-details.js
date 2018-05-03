@@ -16,33 +16,40 @@ export default class ViewHeroDetails {
 
     let itemsdiv = document.getElementById('items');
     itemsdiv.innerHTML = '';
+
+    let details = document.getElementById('champ-detail');
+    details.innerHTML = '';
   }
 
     showHeroAbilities(abilities, localName, name, descriptions) {
       this.clearList();
 
-      let maindiv = document.getElementById('items');
+        let maindiv = document.getElementById('champ-detail');
+
+        let wrapper = document.createElement('div');
 
       let avatar = document.createElement('img');
       avatar.src = '/dota_images/heroes/' + name + '_vert.jpg';
-      console.log(avatar.src);
-      maindiv.appendChild(avatar);
+      wrapper.appendChild(avatar);
+      wrapper.className = 'wrapper-champ-detail'
 
 
       let header = document.createElement('h2');
       header.innerHTML = localName;
-      maindiv.appendChild(header);
+      wrapper.appendChild(header);
 
-      console.log(name.toLowerCase());
-
+      maindiv.appendChild(wrapper);
 
       abilities.forEach((element, index) => {
         let abilityItem = document.createElement('div');
+
+        abilityItem.className = 'ability-item';
         abilityItem.style.display = 'block';
         abilityItem.style.clear = 'both';
 
         let abilityName = document.createElement('h4');
         abilityName.innerHTML = element.localizedName;
+        abilityName.className = 'ability-name';
 
         let wrapper = document.createElement('div');
         let img = document.createElement('img');
@@ -58,7 +65,7 @@ export default class ViewHeroDetails {
         wrapper.appendChild(desc);
 
         abilityItem.appendChild(abilityName);
-        abilityName.appendChild(wrapper);
+        abilityItem.appendChild(wrapper);
 
         maindiv.appendChild(abilityItem);
 
